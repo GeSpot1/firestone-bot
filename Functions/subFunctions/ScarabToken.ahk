@@ -1,6 +1,5 @@
 ; ScarabToken.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
 #Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 #Include %A_ScriptDir%\Functions\subFunctions\MainMenu.ahk
 
