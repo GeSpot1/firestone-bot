@@ -1,6 +1,6 @@
 ; Emerald.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Emerald(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0x7B6926, 1, Fast RGB

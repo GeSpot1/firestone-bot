@@ -1,6 +1,6 @@
 ; MainMenu.ahk
 
-#include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 ;check to see if we are on the mainmenu in case script ends up badly on another menu, also skips the rate pop-up, it is done via avatar color(that is taken automatically on script start)
 MainMenu(){

@@ -1,6 +1,6 @@
 ; Awaken.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 AwakenRun(){
     ControlFocus,, ahk_exe Firestone.exe

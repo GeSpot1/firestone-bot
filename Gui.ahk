@@ -6,7 +6,7 @@ SetWorkingDir, %A_ScriptDir%
 ; ==============================================================================
 ; CONFIGURATION & GLOBAL VARIABLES
 ; ==============================================================================
-FirestoneBotVersion := "v6.2.1"
+Global FirestoneBotVersion := "v6.2.3"
 Global SettingsMap := {}
 
 ; --- Common Options ---
@@ -111,7 +111,7 @@ LoadSettings()
 ; ==============================================================================
 ; GUI CONSTRUCTION
 ; ==============================================================================
-Gui, +OwnDialogs
+Gui, +HwndFSBotGuiHwnd
 Gui, Font, s10, Segoe UI
 Gui, Color, White
 
@@ -126,7 +126,7 @@ Gui, Tab, 1
     Gui, Font, s10 Norm
 
     ; --- Instructions Group ---
-    Gui, Add, GroupBox, x40 y90 w880 h500, Important Requirements & Instructions
+    Gui, Add, GroupBox, x40 y90 w880 h530, Important Requirements & Instructions
 
     Gui, Font, Bold
     Gui, Add, Text, xp+20 yp+30 w840, SYSTEM & GAME SETTINGS:
@@ -147,20 +147,34 @@ Gui, Tab, 1
     Gui, Font, Bold
     Gui, Add, Text, y+20 w840, BOT USAGE:
     Gui, Font, Norm
-    Gui, Add, Text, y+5 w840, - Exit Button is Windows Key + ESC.
     Gui, Add, Text, y+5 w840, - Check all tabs and activate ONLY what you need. Deactivate the rest.
     Gui, Add, Text, y+5 w840, - After starting the game, click "Maximize" (Square icon next to X).
     Gui, Add, Text, y+5 w840, - DO NOT move or zoom the map. Leave it as it is on login. If moved, restart game.
 
     Gui, Font, Bold
-    Gui, Add, Text, y+20 w840, TROUBLESHOOTING:
+    Gui, Add, Text, y+20 w840, HOT KEYS:
+    ;Gui, Font, Norm
+    ;Gui, Add, Text, x60 y+5 w840, - WINDOWS + Esc - Exit and close the bot.
+    ;Gui, Add, Text, x+20 y+5 w840, - CTRL-ALT-P: Pause the script.  When pressed again, the script will restart.
+
+    Gui, Font, Bold
+    Gui, Add, Text, x60 y+5, - WINDOWS + Esc
+    Gui, Font, Norm
+    Gui, Add, Text, x+5 yp, - Exit and close the bot.
+    Gui, Font, Bold
+    Gui, Add, Text, x60 y+5, - CTRL-ALT-P
+    Gui, Font, Norm
+    Gui, Add, Text, x+5 yp, : Pause the script.  When pressed again, the script will restart.
+
+    Gui, Font, Bold
+    Gui, Add, Text, x60 y+20 w840, TROUBLESHOOTING:
     Gui, Font, Norm
     Gui, Add, Text, y+5 w840, - If missions are not found: Ensure System Language/Fonts are English.
     Gui, Add, Text, y+0 w840,   Different system fonts can slightly change sizes and break pixel checks.
 
     ; --- Action Buttons ---
-    Gui, Add, Button, x240 y620 w200 h60 gSaveSettings, SAVE SETTINGS
-    Gui, Add, Button, x520 y620 w200 h60 gButtonStart, START BOT
+    Gui, Add, Button, x240 y650 w200 h60 gSaveSettings, SAVE SETTINGS
+    Gui, Add, Button, x520 y650 w200 h60 gButtonStart, START BOT
 
 ; ------------------------------------------------------------------------------
 ; TAB 2: GENERAL OPTIONS
@@ -403,6 +417,12 @@ Gui, Tab, 5
     Gui, Add, Text, x60 y+10 w400,
 
 Gui, Show, w960 h750, Firestone Bot %FirestoneBotVersion%
+
+If (%0% = "Restart") {
+    ; This will automatically click the start button if the pause/restart keys were pressed.
+    WinWait, Firestone Bot %FirestoneBotVersion%
+    ControlClick, START BOT, Firestone Bot %FirestoneBotVersion%
+}
 Return
 
 ; ==============================================================================
@@ -410,12 +430,14 @@ Return
 ; ==============================================================================
 
 SaveSettings:
+    Gui +OwnDialogs
     Gui, Submit, NoHide
     SaveSettings()
     MsgBox, 64, Saved, Settings have been saved successfully!
 Return
 
 ButtonStart:
+    Gui +OwnDialogs
     Gui, Submit, NoHide
     If IsFunc("MainScript") {
         SetTimer, MainScript, -100
@@ -459,3 +481,35 @@ SaveSettings() {
         IniWrite, %CurrentVal%, settings.ini, %Section%, %VarName%
     }
 }
+
+GuiPauseReload:
+    ^!P::
+    If (A_IsPaused = 0) {
+        MsgBox, , Bot Status, Pausing the bot.  Press again to restart the script, 2
+        If (A_IsCompiled) {
+            IconSource := A_ScriptFullPath
+            IconId := 3
+        } Else {
+            IconSource := A_AhkPath
+            IconId := 3
+        }
+        Menu, Tray, Icon, %IconSource%, 4, 1 ; Changes system tray icon to Red
+        ; Extract the icon handle directly from the running .EXE
+        hIcon := DllCall("shell32\ExtractIcon", "Ptr", DllCall("GetModuleHandle", "Ptr", 0, "Ptr"), "Str", IconSource, "UInt", IconId, "Ptr")
+
+        SendMessage, 0x80, 0, %hIcon%,, ahk_id %FSBotGuiHwnd% ; Small icon (Window Corber - Caption bar)
+        SendMessage, 0x80, 1, %hIcon%,, ahk_id %FSBotGuiHwnd% ; Large icon (Taskbar button)
+        Pause, On, 1
+    } Else {
+        MsgBox, , Bot Status, Restarting the bot - please wait, 2
+        Sleep, 2000
+        Pause, Off
+        If (A_IsCompiled) {
+            ; If the script was compiled, run the EXE directly with the "Restart" parameter.
+            Run "%A_ScriptFullPath%" "Restart"
+        } Else {
+            ; If the script was not compiled, run via the AHK interepreter with the script path and the "Restart" parameter.
+            Run "%A_AhkPath%" "%A_ScriptFullPath%" "Restart"
+        }
+    }
+    Return

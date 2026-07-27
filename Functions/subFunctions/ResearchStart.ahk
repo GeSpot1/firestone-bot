@@ -1,6 +1,6 @@
 ; ResearchStart.ahk
 
-#Include Functions\subFunctions\ResearchClicks.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\ResearchClicks.ahk
 
 ResearchStart() {
     MouseMove, 1429, 944

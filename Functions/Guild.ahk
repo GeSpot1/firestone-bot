@@ -1,9 +1,9 @@
 ; Guild.ahk
 
-#Include Functions\subFunctions\Awaken.ahk
-#Include Functions\subFunctions\Chaos.ahk
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\PTree.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\Awaken.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\Chaos.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\PTree.ahk
 
 ; expeditions function
 Guild(){

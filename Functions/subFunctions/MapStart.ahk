@@ -1,5 +1,5 @@
-﻿#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\MapClose.ahk
+﻿#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MapClose.ahk
 
 MapStart(){
     stateFile := "MapStartState.ini"

@@ -1,6 +1,6 @@
 ; MysteryBox.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 MysteryBox(){
     ; Scroll to the bottom to look for Mystery Box

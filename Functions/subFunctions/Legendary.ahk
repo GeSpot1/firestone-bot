@@ -1,6 +1,6 @@
 ; Legendary.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Legendary(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xC63A07, 3, Fast RGB

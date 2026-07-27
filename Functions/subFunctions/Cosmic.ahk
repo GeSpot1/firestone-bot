@@ -1,6 +1,6 @@
 ; Cosmic.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Cosmic(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xD326C0, 1, Fast RGB

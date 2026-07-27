@@ -1,37 +1,39 @@
 ﻿; Deaeth85 Firestone Bot.ahk
 
 #SingleInstance Force
-#Include Gui.ahk
-#Include Functions\Alchemist.ahk
-#Include Functions\Arena.ahk
-#Include Functions\CheckMail.ahk
-#Include Functions\ClaimBeer.ahk
-#include Functions\subFunctions\ScarabToken.ahk
-#include Functions\Scarab.ahk
-#Include Functions\ClaimEngineer.ahk
-#Include Functions\ClaimEvents.ahk
-#Include Functions\ClaimRituals.ahk
-#Include Functions\ExoticMerchant.ahk
-#Include Functions\Guardian.ahk
-#Include Functions\Guild.ahk
-#Include Functions\HeroUpgrade.ahk
-#Include Functions\MapRedeem.ahk
-#Include Functions\OpenChests.ahk
-#Include Functions\Quests.ahk
-#Include Functions\Research.ahk
-#Include Functions\Shop.ahk
-#Include Functions\SendHeartbeat.ahk
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\GetColor.ahk
-#Include Functions\subFunctions\GoMap.ahk
-#Include Functions\subFunctions\MainMenu.ahk
-#Include Functions\subFunctions\MapClose.ahk
-#Include Functions\subFunctions\OpenTown.ahk
-#Include Functions\RestartGameRoutine.ahk
+#Include %A_ScriptDir%\Gui.ahk
+#Include %A_ScriptDir%\Functions\Alchemist.ahk
+#Include %A_ScriptDir%\Functions\Arena.ahk
+#Include %A_ScriptDir%\Functions\CheckMail.ahk
+#Include %A_ScriptDir%\Functions\ClaimBeer.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\ScarabToken.ahk
+#Include %A_ScriptDir%\Functions\Scarab.ahk
+#Include %A_ScriptDir%\Functions\ClaimEngineer.ahk
+#Include %A_ScriptDir%\Functions\ClaimEvents.ahk
+#Include %A_ScriptDir%\Functions\ClaimRituals.ahk
+#Include %A_ScriptDir%\Functions\ExoticMerchant.ahk
+#Include %A_ScriptDir%\Functions\Guardian.ahk
+#Include %A_ScriptDir%\Functions\Guild.ahk
+#Include %A_ScriptDir%\Functions\HeroUpgrade.ahk
+#Include %A_ScriptDir%\Functions\MapRedeem.ahk
+#Include %A_ScriptDir%\Functions\OpenChests.ahk
+#Include %A_ScriptDir%\Functions\Quests.ahk
+#Include %A_ScriptDir%\Functions\Research.ahk
+#Include %A_ScriptDir%\Functions\Shop.ahk
+#Include %A_ScriptDir%\Functions\SendHeartbeat.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\GetColor.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\GoMap.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MainMenu.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MapClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\OpenTown.ahk
+#Include %A_ScriptDir%\Functions\RestartGameRoutine.ahk
 
 SetWorkingDir %A_ScriptDir%
 #NoEnv
 SetBatchLines, -1
+Global FSBotGuiHwnd
+
 ; start of main script
 MainScript(){
     currentTime := A_TickCount
@@ -221,8 +223,15 @@ MainScript(){
 
 GuiEscape:
 GuiClose:
-;    *#$Esc::
-    ~*#$Esc::
+;    *#$Esc::    ; Escape
+    ;~*#$Esc::    ; Windows Key + Escape
+    *#$Esc::    ; Windows Key + Escape
+      ; Key      Function
+      ;  ~       Passes the normal key's action, so if you do ~Esc, it will capture the hotkey, but also still send the Esc key sequence to the system/current app.
+      ;  *       Fires the hotkey even if extra modifiers are begin held down.
+      ;  #       Windows Key
+      ;  $       Only necessary if the script uses the Send command.  We use ~ and *, which are keyboard modifiers, so we technically don't need the $.
+      ; ~*#$Esc  This is Windows Key + Esc
     SendHeartbeat("Exit Bot", true, true)
     ExitApp
 ;~Esc::Return

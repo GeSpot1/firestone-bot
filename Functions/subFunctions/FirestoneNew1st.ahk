@@ -1,6 +1,6 @@
 ; FirestoneNew1st.ahk
 
-#Include Functions\subFunctions\FirestoneClicks.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\FirestoneClicks.ahk
 
 FirestoneNew1st() {
     If (Slot1InProcess = 0){

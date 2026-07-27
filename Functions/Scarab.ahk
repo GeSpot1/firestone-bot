@@ -1,6 +1,6 @@
 ;Scarab.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Scarab(){
     ; check if skip using scarab token was selected

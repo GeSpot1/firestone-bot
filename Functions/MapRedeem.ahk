@@ -1,8 +1,8 @@
 ; MapRedeem.ahk
 
-#Include Functions\subFunctions\ClaimCampaign.ahk
-#Include Functions\subFunctions\MapClose.ahk
-#Include Functions\subFunctions\MapStart.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\ClaimCampaign.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MapClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MapStart.ahk
 
 ; Function to redeem the missions
 MapRedeem(){

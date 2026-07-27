@@ -1,6 +1,6 @@
 ; Wooden.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Wooden(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0x442522, 1, Fast RGB

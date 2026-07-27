@@ -1,6 +1,6 @@
 ; Common.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Common(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xC9782B, 3, Fast RGB

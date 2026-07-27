@@ -1,7 +1,7 @@
 ; Quests.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\MainMenu.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MainMenu.ahk
 
 ; claim daily quests
 ClaimQuests(){

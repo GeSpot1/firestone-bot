@@ -1,6 +1,6 @@
 ; Mythic.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Mythic(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xF09C15, 3, Fast RGB

@@ -1,8 +1,8 @@
 ;ClaimBeer.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\CraftArtifact.ahk
-#Include Functions\subFunctions\UseTavernToken.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\CraftArtifact.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\UseTavernToken.ahk
 
 ClaimBeer(){
     ; check if skip beer was selected

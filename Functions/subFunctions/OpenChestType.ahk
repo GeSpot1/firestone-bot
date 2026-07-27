@@ -1,6 +1,6 @@
 ; OpenChestType.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 OpenChestType(colorHex, colorDistance := 2){
 ;PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, colorHex, colorDistance, Fast RGB

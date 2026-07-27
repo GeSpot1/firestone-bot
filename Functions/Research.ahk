@@ -1,8 +1,8 @@
 ; Research.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\ResearchStart.ahk
-#Include Functions\subFunctions\ResearchSlotTest.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\ResearchStart.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\ResearchSlotTest.ahk
 
 global Slot1InProcess := 0
 global Slot2InProcess := 0

@@ -1,6 +1,6 @@
 ; ResearchAfterStartTest.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 RAST(){
     ; check for status of slot 2

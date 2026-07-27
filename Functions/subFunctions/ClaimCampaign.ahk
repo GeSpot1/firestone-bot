@@ -1,8 +1,8 @@
 ; ClaimCampaign.ahk
 
-#Include Functions\subFunctions\LiberationMissions.ahk
-#Include Functions\subFunctions\GoMap.ahk
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\LiberationMissions.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\GoMap.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 ;function to get the campaign coins and tokens
 ClaimCampaign(){

@@ -1,8 +1,8 @@
 ; upgradeBlessings
 
-#Include Functions\subFunctions\MainMenu.ahk
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\ClickBless.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MainMenu.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\ClickBless.ahk
 
 ControlFocus,, ahk_exe Firestone.exe
 MainMenu()

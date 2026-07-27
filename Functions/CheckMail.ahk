@@ -1,6 +1,6 @@
 ; CheckMail.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 CheckMail(){
     ControlFocus,, ahk_exe Firestone.exe

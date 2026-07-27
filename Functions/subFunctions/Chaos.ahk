@@ -1,6 +1,6 @@
 ; Chaos.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 HitChaos(){
     ControlFocus,, ahk_exe Firestone.exe

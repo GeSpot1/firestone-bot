@@ -1,6 +1,6 @@
 ; Golden.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Golden(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xCF7029, 1, Fast RGB

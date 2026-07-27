@@ -1,6 +1,6 @@
 ; OracleDaily
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 OracleDaily(){
     ; Look for oracle gift notification

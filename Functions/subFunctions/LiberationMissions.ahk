@@ -1,7 +1,7 @@
 ; LiberationMissions.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\LiberationInProgressCheck.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\LiberationInProgressCheck.ahk
 
 LiberationMissions(){
     ControlFocus,, ahk_exe Firestone.exe

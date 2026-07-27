@@ -1,6 +1,6 @@
 ; OraclesGift.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 OraclesGift(){
     ; Scroll to the bottom to look for Oracle's Gifts
@@ -10,7 +10,8 @@ OraclesGift(){
         Send, {WheelDown}
         Sleep, 200
     }
-    PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xFFD800, 1, Fast RGB
+;    PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xFFD800, 1, Fast RGB
+    PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0x00EAF6, 1, Fast RGB
     If (ErrorLevel=0){
         MouseMove, FoundX, FoundY
         Sleep, 1000

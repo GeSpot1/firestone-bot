@@ -1,29 +1,29 @@
 ; OpenChests.ahk
 
-#Include Functions\subFunctions\MainMenu.ahk
-#Include Functions\subFunctions\BigClose.ahk
-;#Include Functions\subFunctions\Comet.ahk
-;#Include Functions\subFunctions\Common.ahk
-;#Include Functions\subFunctions\Cosmic.ahk
-;#Include Functions\subFunctions\Diamond.ahk
-;#Include Functions\subFunctions\Emerald.ahk
-;#Include Functions\subFunctions\Epic.ahk
-;#Include Functions\subFunctions\Galaxy.ahk
-;#Include Functions\subFunctions\Golden.ahk
-;#Include Functions\subFunctions\Iron.ahk
-;#Include Functions\subFunctions\Legendary.ahk
-;#Include Functions\subFunctions\Lunar.ahk
-#Include Functions\subFunctions\MysteryBox.ahk
-;#Include Functions\subFunctions\Mythic.ahk
-;#Include Functions\subFunctions\Nebula.ahk
-;#Include Functions\subFunctions\Opal.ahk
-#Include Functions\subFunctions\OpenChestType.ahk
-#Include Functions\subFunctions\OraclesGift.ahk
-;#Include Functions\subFunctions\Rare.ahk
-;#Include Functions\subFunctions\Solar.ahk
-;#Include Functions\subFunctions\Titan.ahk
-;#Include Functions\subFunctions\Uncommon.ahk
-;#Include Functions\subFunctions\Wooden.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MainMenu.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Comet.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Common.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Cosmic.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Diamond.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Emerald.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Epic.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Galaxy.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Golden.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Iron.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Legendary.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Lunar.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MysteryBox.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Mythic.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Nebula.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Opal.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\OpenChestType.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\OraclesGift.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Rare.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Solar.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Titan.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Uncommon.ahk
+;#Include %A_ScriptDir%\Functions\subFunctions\Wooden.ahk
 
 OpenChests(){
     ; open bag

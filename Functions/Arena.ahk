@@ -1,7 +1,7 @@
 ;Arena.ahk
 
-#Include Functions\subFunctions\ArenaBattle.ahk
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\ArenaBattle.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Arena(){
     ControlFocus,, ahk_exe Firestone.exe

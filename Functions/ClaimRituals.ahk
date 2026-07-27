@@ -1,8 +1,8 @@
 ; ClaimRituals.ahk
 
-#Include Functions\UpgradeBlessings.ahk
-#Include Functions\subFunctions\OpenTown.ahk
-#Include Functions\subFunctions\OracleDaily.ahk
+#Include %A_ScriptDir%\Functions\UpgradeBlessings.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\OpenTown.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\OracleDaily.ahk
 
 ;function that checks Oracle
 ClaimRituals(){

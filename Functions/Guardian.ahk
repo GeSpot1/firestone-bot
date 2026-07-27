@@ -1,6 +1,6 @@
 ; Guardian.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 ;function that does the guardian training and guardian evolving
 Guardian(){

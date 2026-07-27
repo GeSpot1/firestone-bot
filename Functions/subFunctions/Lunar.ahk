@@ -1,6 +1,6 @@
 ; Lunar.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Lunar(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0x00F694, 3, Fast RGB

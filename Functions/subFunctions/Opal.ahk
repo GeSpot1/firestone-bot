@@ -1,6 +1,6 @@
 ; Opal.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Opal(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xA1F3E3, 1, Fast RGB

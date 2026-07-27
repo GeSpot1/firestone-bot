@@ -1,7 +1,7 @@
 ;ClaimEngineer.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\WMUpgrade.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\WMUpgrade.ahk
 
 ClaimEngineer(){
     ControlFocus,, ahk_exe Firestone.exe

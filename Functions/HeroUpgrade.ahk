@@ -1,7 +1,7 @@
 ; HeroUpgrade.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\MainMenu.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MainMenu.ahk
 
 ; Loop for upgrade until we dont have upgrade available
 ClickHeroIfPixelFound(x1, y1, x2, y2, color, clickX, clickY, clickCount := 20)

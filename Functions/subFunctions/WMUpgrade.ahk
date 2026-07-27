@@ -1,8 +1,8 @@
 ; WMUpgrade.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\WMBlueprintsOnly.ahk
-#Include Functions\subFunctions\WMLevelOnly.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\WMBlueprintsOnly.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\WMLevelOnly.ahk
 
 WMUpgrade(){
     ControlFocus,, ahk_exe Firestone.ex

@@ -1,6 +1,6 @@
 ; GoMap.ahk
 
-#include Functions\subFunctions\MainMenu.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MainMenu.ahk
 
 GoMap()
 {ControlFocus,, ahk_exe Firestone.exe

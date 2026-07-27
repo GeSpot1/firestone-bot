@@ -1,6 +1,6 @@
 ; CraftArtifact.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 CraftArtifact(){
     PixelSearch, X, Y, 305, 517, 356, 558, 0x0AA008, 3, Fast RGB

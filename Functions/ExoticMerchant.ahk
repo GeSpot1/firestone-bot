@@ -1,8 +1,8 @@
 ; SellExotic.ahk
 
-#Include Functions\subFunctions\BuyExotic.ahk
-#Include Functions\subFunctions\BigClose.ahk
-#Include Functions\subFunctions\ExoticUpgrades.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BuyExotic.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\ExoticUpgrades.ahk
 
 ExoticMerchant(){
     ; Open exotic merchant

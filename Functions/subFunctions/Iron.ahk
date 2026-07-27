@@ -1,6 +1,6 @@
 ; Iron.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Iron(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0x071250, 3, Fast RGB

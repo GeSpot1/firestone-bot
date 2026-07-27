@@ -1,6 +1,6 @@
 ; Solar.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Solar(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xFEF343, 3, Fast RGB

@@ -1,6 +1,6 @@
 ; Titan.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Titan(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0x08BAC6, 3, Fast RGB

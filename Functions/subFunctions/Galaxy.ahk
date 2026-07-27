@@ -1,6 +1,6 @@
 ; Galaxy.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Galaxy(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xFF82FF, 1, Fast RGB

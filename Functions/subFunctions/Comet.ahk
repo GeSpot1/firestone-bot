@@ -1,6 +1,6 @@
 ; Comet.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Comet(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0x9F3C29, 1, Fast RGB

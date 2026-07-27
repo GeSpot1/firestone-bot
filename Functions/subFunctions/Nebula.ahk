@@ -1,6 +1,6 @@
 ; Nebula.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Nebula(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0x5B1D84, 1, Fast RGB

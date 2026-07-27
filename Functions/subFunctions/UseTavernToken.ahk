@@ -1,7 +1,7 @@
 ; UseTavernToken.ahk
 
-#include Functions\subFunctions\MainMenu.ahk
-#include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\MainMenu.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 UseToken(){
     ; check for use token button

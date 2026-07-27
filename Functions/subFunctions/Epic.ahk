@@ -1,6 +1,6 @@
 ; Epic.ahk
 
-#Include Functions\subFunctions\BigClose.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\BigClose.ahk
 
 Epic(){
     PixelSearch, FoundX, FoundY, 1543, 307, 1887, 905, 0xB273F5, 3, Fast RGB

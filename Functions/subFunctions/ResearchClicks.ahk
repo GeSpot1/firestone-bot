@@ -1,6 +1,6 @@
 ; ResearchClicks.ahk
 
-#Include Functions\subFunctions\ResearchSlotTest.ahk
+#Include %A_ScriptDir%\Functions\subFunctions\ResearchSlotTest.ahk
 
 ResearchClicks(){
     ; start or safely click away from spend gems
